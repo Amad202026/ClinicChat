@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "ClinicChat",
+  "version": "0.5.0",
+  "description": "Chat internal staff klinik.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": ["storage", "notifications"],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["data/staff.xlsx", "icons/*.png"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "config.js",
+        "lib/supabase.js",
+        "lib/client.js",
+        "ui/styles.js",
+        "ui/components/mentions.js",
+        "ui/components/notifications.js",
+        "ui/components/login.js",
+        "ui/components/password.js",
+        "ui/components/chat-room.js",
+        "ui/components/staff-picker.js",
+        "ui/components/lobby.js",
+        "ui/components/groups.js",
+        "ui/components/private-chat.js",
+        "ui/components/profile.js",
+        "ui/components/admin.js",
+        "content/content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}

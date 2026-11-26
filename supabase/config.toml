@@ -1,0 +1,4 @@
+project_id = "clinic-assist-chat"
+
+[functions.staff-admin]
+verify_jwt = false

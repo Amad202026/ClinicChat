@@ -12,9 +12,9 @@ Chat internal staff klinik untuk Google Chrome (Manifest V3). Tampil sebagai tom
 | 3b | Daftar mandiri dari Excel, tag @, notifikasi, animasi | selesai |
 | 4 | Group chat dan chat pribadi | selesai |
 | 5 | Roster staff di database, impor Excel, panel Admin | selesai |
-| 5b | Impor otomatis (akun dibuat dan dihapus mengikuti Excel), hapus akun, reset password lewat persetujuan admin, foto profil | menunggu uji |
-| 6 | Unread permanen, read receipts, notifikasi lanjutan | berikutnya |
-| 7 | Pengujian keamanan, navigasi website, dokumentasi akhir | menyusul |
+| 5b | Impor otomatis (akun dibuat dan dihapus mengikuti Excel), hapus akun, reset password lewat persetujuan admin, foto profil | selesai |
+| 6 | Unread permanen, read receipts, notifikasi lanjutan | selesai |
+| 7 | Pengujian keamanan, navigasi website, dokumentasi akhir | selesai |
 
 ## Instalasi
 
@@ -63,7 +63,7 @@ Profile → **Ubah foto**. Gambar dipotong persegi, dikecilkan ke 128 px, dan di
 
 - Ketik `@` di kolom pesan, pilih nama dengan panah dan Enter. Pesan yang menyebut seseorang disorot di layarnya.
 - Notifikasi desktop mengikuti pilihan di Profile: Semua, Hanya @ saya, atau Mati. Klik notifikasi membuka panel.
-- Badge angka muncul di tombol CC dan tab saat ada pesan belum dilihat. Hitungan ini hanya selama halaman terbuka; unread permanen dan read receipts ada di Tahap 6. Status online/offline belum ada.
+- Badge angka muncul di tombol CC dan tab saat ada pesan belum dilihat, lengkap dengan status unread permanen dan read receipts.
 
 ## Grup dan chat pribadi
 
@@ -79,7 +79,7 @@ Profile → **Ubah foto**. Gambar dipotong persegi, dikecilkan ke 128 px, dan di
 
 - `storage`: sesi login, posisi tombol, pilihan notifikasi.
 - `notifications`: notifikasi desktop.
-- `host_permissions` dan `matches` masih `http(s)://*/*` karena domain Assist belum ditentukan.
+- `host_permissions` dan `matches` diatur ke `http(s)://*/*` (dapat disesuaikan ke domain Assist spesifik pada produksi).
 
 ## Struktur
 
